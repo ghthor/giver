@@ -21,9 +21,9 @@ $ ls | giver give | tee out.txt
 # 4 qux
 # 5 zurg
 # 6 beep.txt
-# 8 boop.md
+# 7 boop.md
 
-$ cat out.txt | giver pick 1 3 5-8
+$ cat out.txt | giver pick 1 3 5-7
 # foo
 # baz
 # zurg
@@ -73,7 +73,7 @@ $ ls | giver give --format '[{}]'
 # [4] qux
 # [5] zurg
 # [6] beep.txt
-# [8] boop.md
+# [7] boop.md
 # NOTE: --out=json --format not allowed! (but OK with --out=sub)
 # NOTE: --format is just for presenting output. If you wanna give it to
 # `giver pick` just re-run `giver give`
