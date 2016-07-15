@@ -12,7 +12,7 @@ Giver gives IDs to stuff and lets you pick stuff by IDs. You can choose what
 
 ```bash
 $ ls
-# foo bar baz quz zurg beep.txt boop.md
+# foo bar baz qux zurg beep.txt boop.md
 
 $ ls | giver give | tee out.txt
 # 1 foo
@@ -53,7 +53,7 @@ $ ls -l | giver give --regex=$path_regex
 # 2 bar
 # 3 baz
 # 4 qux
-# 5 qux
+# 5 zurg
 # 6 beep.txt
 # 7 boop.md
 
@@ -62,7 +62,7 @@ $ ls -l | giver give --regex=$path_regex --out=sub
 # drw-r--r-- 1 jonas wheel 399 Jul 15 10:36 2 bar
 # drw-r--r-- 1 jonas wheel 399 Jul 15 10:36 3 baz
 # drw-r--r-- 1 jonas wheel 399 Jul 15 10:36 4 qux
-# drw-r--r-- 1 jonas wheel 399 Jul 15 10:36 5 qux
+# drw-r--r-- 1 jonas wheel 399 Jul 15 10:36 5 zurg
 # -rw-r--r-- 1 jonas wheel 399 Jul 15 10:36 6 beep.txt
 # -rw-r--r-- 1 jonas wheel 399 Jul 15 10:36 7 boop.md
 
