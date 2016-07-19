@@ -78,6 +78,14 @@ $ ls | giver give --format '[{}]'
 # NOTE: --format is just for presenting output. If you wanna give it to
 # `giver pick` just re-run `giver give`
 
+$ ls | giver give | giver pick 1 2 beep.txt
+# [error] ID not found: "beep.txt"
+
+$ ls | giver give | giver pick --barf 1 beep.txt
+# foo
+# beep.txt
+# NOTE: only --in is allowed with --barf
+
 # FIXME: `giver` is a shit name. But I'm kind of growing fond of its dorkiness.
 ```
 
@@ -95,6 +103,8 @@ $ ls | giver give --format '[{}]'
     - `--out=[json|bare|idlist]`. Default `bare`
     - `--format=<string with {} as placeholder for <ID>`
       - Not allowed with `--out=json` or `--out=bare`
+    - `--barf` spit non-IDs back out
+      - only `--in` allowed with `--barf`
 
 
 ## Design goals
